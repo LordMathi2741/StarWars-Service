@@ -1,0 +1,39 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+
+  <!-- Mass Column -->
+  <ng-container matColumnDef="mass">
+    <th mat-header-cell *matHeaderCellDef> Mass </th>
+    <td mat-cell *matCellDef="let element"> {{element.mass}} </td>
+  </ng-container>
+
+  <!-- Gender Column -->
+  <ng-container matColumnDef="gender">
+    <th mat-header-cell *matHeaderCellDef> Gender </th>
+    <td mat-cell *matCellDef="let element"> {{element.gender}} </td>
+  </ng-container>
+
+  <!-- Skin Color Column -->
+  <ng-container matColumnDef="skin_color">
+    <th mat-header-cell *matHeaderCellDef> Skin Color </th>
+    <td mat-cell *matCellDef="let element"> {{element.skin_color}} </td>
+  </ng-container>
+
+  <!-- Birth Year Column -->
+  <ng-container matColumnDef="birth_year">
+    <th mat-header-cell *matHeaderCellDef> Birth Year </th>
+    <td mat-cell *matCellDef="let element"> {{element.birth_year}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
